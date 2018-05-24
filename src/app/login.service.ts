@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HttpModule, Http } from '@angular/http';
 import { Observable } from 'rxjs';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class LoginService {
@@ -8,7 +9,8 @@ export class LoginService {
   }
 
   login (user: String, pws: String): Observable<any> {
-    this.http.get('http://localhost:8080/rest/Usuario?login=' + user + '&clave=' + pws).map(Response => {
+    return this.http.get('http://localhost:8080/rest/Usuario?login=' + user + '&clave=' + pws).
+    map(Response => {
       return Response.text();
     });
   }

@@ -1,3 +1,5 @@
+import { HttpModule } from '@angular/http';
+import { LoginService } from './login.service';
 import { LoginComponent } from './login.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -17,8 +19,9 @@ import { AppRouteModule } from './tutorial.module';
     BrowserModule,
     FormsModule,
     AppRouteModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
