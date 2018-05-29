@@ -1,3 +1,4 @@
+import { ListaClientesComponent } from './listaClientes.component';
 import { HttpModule } from '@angular/http';
 import { LoginService } from './login.service';
 import { LoginComponent } from './login.component';
@@ -14,6 +15,7 @@ import { AppRouteModule } from './tutorial.module';
   declarations: [
     AppComponent,
     LoginComponent,
+    ListaClientesComponent,
   ],
   imports: [
     BrowserModule,

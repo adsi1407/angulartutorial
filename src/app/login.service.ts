@@ -14,4 +14,11 @@ export class LoginService {
       return Response.text();
     });
   }
+
+  obtenerClientes(): Observable<any> {
+    return this.http.get('http://localhost:8080/rest/Cliente').
+    map(Response => {
+      return Response.text();
+    });
+  }
 }
